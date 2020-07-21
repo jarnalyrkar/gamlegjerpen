@@ -1,0 +1,18 @@
+.searchContainer {
+  order: -1;
+  margin-top: 11px;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .searchContainer {
+    order: initial;
+    margin: initial;
+  }
+}
+
+.search {
+  & input[type="image"] {
+    margin-bottom: -3px;
+  }
+}

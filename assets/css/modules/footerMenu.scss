@@ -1,0 +1,27 @@
+.footerMenu {
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__link {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    display: inline-block;
+    &:hover {
+      text-decoration: none;
+      border-bottom: 1px solid #000;
+      color: #fff;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .footerMenu {
+    text-align: center;
+    &__list {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+}

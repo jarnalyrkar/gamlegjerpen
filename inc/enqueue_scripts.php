@@ -46,4 +46,5 @@ function add_my_scripts() {
   // wp_enqueue_style('typekit', 'https://use.typekit.net/pln3dhd.css', null, '1.0.0', false);
   // wp_enqueue_style('main-styles', $css , null,  null, false);
   // wp_enqueue_script('main-scripts', $script, array(), null, true);
+  wp_enqueue_style('opensans', 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap', null, '1.0.0', false);
 } add_action('wp_enqueue_scripts', 'add_my_scripts');

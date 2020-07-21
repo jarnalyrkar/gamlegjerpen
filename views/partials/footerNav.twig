@@ -1,0 +1,20 @@
+{# Example markup #}
+<nav class="footerMenu">
+  <ul class="footerMenu__list">
+    {# mainNav er globalt satt i inc/add_twig_nav.php #}
+    {% for item in footerNav.items %}
+    <li class="footerMenu__item {{ item.classes|join(' ') }}">
+      <a class="footerMenu__link" href="{{ item.link }}">{{ item.title }}</a>
+      {% if item.children %}
+      <ul class="footerMenu__submenu">
+        {% for child in item.children %}
+        <li class="footerMenu__item footerMenu__item--sub">
+          <a class="footerMenu__link footerMenu__link--sub" href="{{ child.link }}">{{ child.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

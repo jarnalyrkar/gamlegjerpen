@@ -1,3 +1,40 @@
+@font-face {
+  font-family: "Gothic";
+  src: url('../fonts/CloisterBlack.ttf');
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {font-size: 2em;}
+h2 {font-size: 1.5em;}
+h3 {font-size: 1.17em;}
+h4 {font-size: 1em;}
+h5 {font-size: .83em;}
+h6 {font-size: .67em;}
+
 .visually-hidden {
   display: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: invert(1);
+  display: inline-block;
+  float: right;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1300px;
+  }
 }

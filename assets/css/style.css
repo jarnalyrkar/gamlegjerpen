@@ -18,5 +18,11 @@
 @import "base/responsive-embed.scss";
 
 /* Modules */
-@import "modules/primary-nav.scss";
+@import "modules/headerMenu.scss";
 @import "modules/header.scss";
+@import "modules/search.scss";
+@import "modules/banner.scss";
+@import "modules/farmList.scss";
+@import "modules/footer.scss";
+@import "modules/footerMenu.scss";
+@import "modules/thanks.scss";

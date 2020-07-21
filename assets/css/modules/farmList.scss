@@ -1,0 +1,10 @@
+.farmList {
+  & ul {
+    display: block;
+    margin: 0;
+    padding-left: 0;
+  }
+  & li {
+    display: inline;
+  }
+}

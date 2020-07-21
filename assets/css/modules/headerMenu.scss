@@ -5,11 +5,12 @@
   padding: 0;
   position: relative;
   align-self: baseline;
+  top: 0.5rem;
 
   &--toggled {
     z-index: 1;
     & .hamburger__line {
-      border-color: white;
+      border-color: #000;
     }
   }
 
@@ -17,7 +18,7 @@
     display: block;
     border: 1px solid black;
     width: 30px;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.25em;
     &:nth-child(3) {
       margin-bottom: 0;
     }
@@ -26,7 +27,7 @@
 }
 
 .headerMenu {
-  background-color: #631DC5;
+  background-color: #fff;
   position: absolute;
   top: 0; right: 0;
   height: 100vh;
@@ -34,23 +35,25 @@
   transition: width 200ms ease-in-out;
   z-index: 1;
 
-  & .nav-main {
-    padding: 2rem;
+  &__list {
     list-style: none;
     margin-bottom: 0;
     display: none;
   }
 
+
   &--open {
     width: 100vw;
     transition: width 200ms ease-in-out;
-    & .nav-main {
-      display: block;
+    border: 5px double black;
+    & .headerMenu__list {
+      display: flex;
+      flex-direction: column;
     }
   }
 
-  & .nav-main-link {
-    color: white;
+  &__link {
+    color: black;
     font-family: Geneva, sans-serif;
     text-transform: uppercase;
   }
@@ -63,21 +66,23 @@
   .headerMenu {
     display: block;
     position: static;
-    background-color: transparent;
     height: auto;
     width: auto;
-    & .nav-main {
+    &__list {
       padding: 0;
       display: flex;
-      &-link {
-        color: black;
-      }
+    }
+    &__link {
+      color: black;
+    }
+    &__item {
+      margin: 0 1rem;
     }
     & .search {
       margin-left: 1rem;
       & input[type="text"] {
         border: 0;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #000;
       }
     }
   }
