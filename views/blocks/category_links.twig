@@ -1,0 +1,8 @@
+<article>
+  <h2 style="text-align: center;">Andre årstall i {{ category|lower }}</h2>
+  <ul class="relatedPosts">
+    {% for post in Post(related_posts) %}
+      <li><a href="{{ post.link }}">{{ post.title|findyear }}</a></li>
+    {% endfor %}
+  </ul>
+</article>

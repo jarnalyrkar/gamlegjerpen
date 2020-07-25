@@ -1,0 +1,24 @@
+{% extends 'layouts/base.twig' %}
+
+{% block content %}
+<main class="container mt-5">
+  <div class="row">
+    <div class="col-md-8">
+      <h1>{{ post.title }}</h1>
+      {{ post.content }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 sources">
+      {% for category in Term(categories) %}
+        <article class="source">
+          <h2 class="source__header">{{ category.name }}</h2>
+          {% for source in category.posts %}
+            <a class="source__item" href="{{ source.link }}">{{ source.title }}</a>
+          {% endfor %}
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</main>
+{% endblock %}

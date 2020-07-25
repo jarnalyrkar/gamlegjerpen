@@ -1,0 +1,41 @@
+.sources {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.source {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  &__header {
+    text-transform: uppercase;
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    font-size: 1.25rem;
+    background-color: #000;
+    color: #fff;
+    padding: 0.25rem 1rem;
+  }
+  &__item {
+    text-transform: none;
+    text-align: center;
+    color: #000;
+    padding: 0 .5rem;
+    font-size: 1rem;
+    color: #000;
+    border-bottom: 3px solid #fff;
+    transition: border-color 300ms;
+    &:hover {
+      color: #000;
+      text-decoration: none;
+      border-bottom: 3px solid black;
+      transition: border-color 300ms;
+    }
+  }
+}

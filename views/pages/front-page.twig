@@ -1,21 +1,12 @@
 {% extends 'layouts/base.twig' %}
 
 {% block content %}
-<main class="container">
+
+<main class="container mt-5">
   <div class="row">
-    <header class="banner col-12 px-0 px-md-3">
-      <img src="{{ gjerpen_kirke }}" alt="Gjerpen Kirke, 2017">
-      <p class="d-block d-md-none">Gjerpen Kirke, 2017. Foto: Gard Strøm</p>
-    </header>
-    <article class="farmList col-12">
-      <h2>Gårdsliste</h2>
-      <ul>
-        <li><a href="#">Augestad, </a></li>
-        <li><a href="#">Bakken, </a></li>
-        <li><a href="#">Ballestad, </a></li>
-        <li><a href="#">Bekkevold</a></li>
-      </ul>
-    </article>
+    <div class="col-12">
+      {{ post.content }}
+    </div>
   </div>
 </main>
 {% endblock %}

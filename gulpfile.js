@@ -60,8 +60,7 @@ gulp.task('watch', function () {
     notify: false,
     proxy: settings.urlToPreview,
     ghostMode: false,
-    injectChanges: true,
-
+    injectChanges: false,
   });
 
   gulp.watch('./**/*.php', function () {
@@ -81,7 +80,7 @@ gulp.task('waitForStyles', gulp.series('styles', function () {
   const src = gulp.src('**/*.css');
   if (isProduction) {
     browserSync.reload();
-    done();
+    console.log("");
   } else {
     return gulp.src([settings.themeLocation + 'dist/css/*.css']).pipe(browserSync.stream());
   }

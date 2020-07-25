@@ -13,6 +13,7 @@
 
 /* Baseline (common typographic elements */
 @import "base/baseline.scss";
+@import "base/wp-overrides.scss";
 
 /* Responsive oembeds. Comment to reset embed behavior to fixed-width */
 @import "base/responsive-embed.scss";
@@ -26,3 +27,5 @@
 @import "modules/footer.scss";
 @import "modules/footerMenu.scss";
 @import "modules/thanks.scss";
+@import "modules/relatedPosts.scss";
+@import "modules/sources.scss";

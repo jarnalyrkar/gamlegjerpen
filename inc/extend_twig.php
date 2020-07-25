@@ -1,6 +1,6 @@
 <?php
 require_once 'add_breadcrumb.php';
-require_once 'phone_number_filter.php';
+require_once 'find_year_filter.php';
 
 /*
  *  I denne funksjonen legger du til funksjoner og filter som du ønsker
@@ -8,7 +8,7 @@ require_once 'phone_number_filter.php';
  */
 function add_to_twig( $twig ) {
   // Du kan legge til filter
-  $twig->addFilter(new Timber\Twig_Filter('phone', 'phone'));
+  $twig->addFilter(new Timber\Twig_Filter('findyear', 'findyear'));
 
   // Du kan legge til funksjoner:
   $twig->addFunction(new Timber\Twig_Function('breadcrumb', 'breadcrumb'));
