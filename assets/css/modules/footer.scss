@@ -17,6 +17,14 @@
   }
 }
 
+.contactSection {
+  display: flex;
+  justify-content: flex-end;
+  & > a {
+    margin-left: 1rem;
+  }
+}
+
 @media (min-width: 768px) {
   .mainFooter {
     justify-content: space-between;

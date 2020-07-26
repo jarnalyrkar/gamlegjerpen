@@ -65,11 +65,11 @@ gulp.task('watch', function () {
 
   gulp.watch('./**/*.php', function () {
     browserSync.reload();
-    done();
+    console.log("Browser Reloaded (PHP)");
   });
   gulp.watch('./**/*.twig', function () {
     browserSync.reload();
-    done();
+    console.log("Browser Reloaded (Twig)");
   });
   gulp.watch([settings.themeLocation + 'assets/css/**/*.css', settings.themeLocation + 'assets/css/style.css'], gulp.parallel('waitForStyles'));
   gulp.watch([settings.themeLocation + 'assets/css/**/*.scss', settings.themeLocation + 'assets/css/style.css'], gulp.parallel('waitForStyles'));

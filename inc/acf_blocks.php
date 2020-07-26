@@ -31,6 +31,15 @@ function gg_acf_blocks() {
 			'icon'				=> 'admin-comments',
 			'keywords'			=> array( 'Linker', 'kategorilinker' ),
 		));
+		acf_register_block(array(
+			'name'				=> 'sticky_header',
+			'title'				=> 'Fast overskrift',
+			'description'		=> 'Overskrifter som holder posisjon ved scroll',
+			'render_callback'	=> 'sticky_header_callback',
+			'category'			=> 'common',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'Sticky', 'Header' ),
+		));
 	}
 }
 add_action('acf/init', 'gg_acf_blocks');
@@ -42,6 +51,7 @@ function faktaboks_callback( $block, $content = '', $is_preview = false ) {
     $context['is_preview'] = $is_preview;
     Timber::render( 'blocks/faktaboks.twig', $context );
 }
+
 function edited_callback( $block, $content = '', $is_preview = false, $post_id = 0) {
     $context = Timber::context();
     $context['block'] = $block;
@@ -50,6 +60,7 @@ function edited_callback( $block, $content = '', $is_preview = false, $post_id =
     $context['date'] = get_the_modified_date('d.m.Y', $post_id);
     Timber::render( 'blocks/sist_oppdatert.twig', $context );
 }
+
 function category_links_callback( $block, $content = '', $is_preview = false, $post_id = 0) {
     $context = Timber::context();
     $context['block'] = $block;
@@ -69,4 +80,12 @@ function category_links_callback( $block, $content = '', $is_preview = false, $p
     $context['related_posts'] = get_posts($args);
 
     Timber::render( 'blocks/category_links.twig', $context );
+}
+
+function sticky_header_callback( $block, $content = '', $is_preview = false ) {
+    $context = Timber::context();
+    $context['block'] = $block;
+    $context['fields'] = get_fields();
+    $context['is_preview'] = $is_preview;
+    Timber::render( 'blocks/sticky_header.twig', $context );
 }
