@@ -1,0 +1,43 @@
+<section class="stickyHeaderTable stickyHeaderTable__columns--{{ fields.overskrifter|length }}">
+  {% for overskrift in fields.overskrifter %}
+    <h3 class="stickyHeaderTable__heading">{{ overskrift.tittel }}</h3>
+  {% endfor %}
+
+  {% for item in fields.innhold %}
+      {% for column in item.columns %}
+        {% if column %}
+          <div class="stickyHeaderTable__data">{{ column }}</div>
+        {% endif %}
+      {% endfor %}
+  {% endfor %}
+</section>
+
+<style>
+.stickyHeaderTable__heading {
+  font-weight: 600;
+  font-size: inherit;
+  margin-bottom: 0;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  padding: 1rem 0;
+  border-bottom: 1px solid black;
+}
+
+.stickyHeaderTable__columns--{{ fields.overskrifter|length }} {
+  font-size: 10px;
+  display: grid;
+  grid-template-columns: repeat({{ fields.overskrifter|length }}, auto);
+  grid-gap: 10px;
+}
+
+
+@media (min-width: 500px) {
+  .stickyHeaderTable__columns--{{ fields.overskrifter|length }} {
+    grid-gap: 15px;
+    font-size: 14px;
+  }
+}
+
+
+</style>

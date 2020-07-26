@@ -1,0 +1,11 @@
+.wp-block {
+  max-width: 100%;
+}
+
+#menu-appearance > ul > li:last-child {
+  display: none;
+}
+
+.hide-if-no-customize {
+  display: none;
+}

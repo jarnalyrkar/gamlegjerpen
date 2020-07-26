@@ -60,17 +60,16 @@ gulp.task('watch', function () {
     notify: false,
     proxy: settings.urlToPreview,
     ghostMode: false,
-    injectChanges: true,
-
+    injectChanges: false,
   });
 
   gulp.watch('./**/*.php', function () {
     browserSync.reload();
-    done();
+    console.log("Browser Reloaded (PHP)");
   });
   gulp.watch('./**/*.twig', function () {
     browserSync.reload();
-    done();
+    console.log("Browser Reloaded (Twig)");
   });
   gulp.watch([settings.themeLocation + 'assets/css/**/*.css', settings.themeLocation + 'assets/css/style.css'], gulp.parallel('waitForStyles'));
   gulp.watch([settings.themeLocation + 'assets/css/**/*.scss', settings.themeLocation + 'assets/css/style.css'], gulp.parallel('waitForStyles'));
@@ -81,7 +80,7 @@ gulp.task('waitForStyles', gulp.series('styles', function () {
   const src = gulp.src('**/*.css');
   if (isProduction) {
     browserSync.reload();
-    done();
+    console.log("");
   } else {
     return gulp.src([settings.themeLocation + 'dist/css/*.css']).pipe(browserSync.stream());
   }

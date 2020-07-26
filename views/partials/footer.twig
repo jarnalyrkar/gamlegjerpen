@@ -1,13 +1,19 @@
 <div class="container-fluid footerContainer">
   <footer class="mainFooter">
     <div class="d-flex flex-column">
-      <p>Gamle Gjerpen &copy; 2000 - {{ 'now' | date('Y')}}</p>
-      <!-- <a class="footerMenu__link" href="mailto:post@gamlegjerpen.no">Send meg en epost!</a> -->
+      <p>Gamle Holla &copy; 2013 - {{ 'now' | date('Y')}}</p>
     </div>
     {% include 'partials/footerNav.twig' %}
-    <a href="https://www.facebook.com/gamlegjerpen">
-      <span class="visually-hidden">Gamle Gjerpen sin facebook</span>
-      <img class="icon" src="{{ facebook_icon }}" alt=""></a>
+    <section class="contactSection">
+      <a href="mailto:webmaster@gamleholla.no">
+        <span class="visually-hidden">Send epost til Gamle Holla</span>
+        <img class="icon" src="{{ mailto_icon }}" alt="">
+      </a>
+      <a href="https://www.facebook.com/gamlegjerpen">
+        <span class="visually-hidden">Gamle Gjerpen sin facebook</span>
+        <img class="icon" src="{{ facebook_icon }}" alt="">
+      </a>
+    </section>
   </footer>
 </div>
   {{ function('wp_footer') }}

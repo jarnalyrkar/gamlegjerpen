@@ -20,3 +20,11 @@ require_once($base_dir . '/inc/add_twig_nav.php');
 require_once($base_dir . '/inc/add_breadcrumb.php');
 // Add woocommerce-support
 // require_once($base_dir . '/inc/add_woocommerce_support.php');
+// Add custom post types
+require_once($base_dir . '/inc/add_custom_post_types.php');
+// Add custom taxonomies
+require_once($base_dir . '/inc/add_custom_taxonomies.php');
+// Remove all comments
+require_once($base_dir . '/inc/disable_comments.php');
+// Add ACF Gutenberg blocks, the timber way
+require_once($base_dir . '/inc/acf_blocks.php');
